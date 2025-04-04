@@ -1,0 +1,21 @@
+[gd_resource type="ShaderMaterial" load_steps=3 format=3 uid="uid://hixndei47d4k"]
+
+[ext_resource type="Shader" uid="uid://dtwscfuvjf4u8" path="res://shaders/volumentric_fog.gdshader" id="1_3wgdf"]
+[ext_resource type="Texture2D" uid="uid://c7wfktr37yl4q" path="res://textures/Turbulence 6 - 512x512.png" id="2_phwvp"]
+
+[resource]
+shader = ExtResource("1_3wgdf")
+shader_parameter/light_positions = PackedVector3Array()
+shader_parameter/light_radiuses = PackedFloat32Array()
+shader_parameter/light_colors = PackedVector3Array()
+shader_parameter/light_count = 1
+shader_parameter/fog_density = 6.655
+shader_parameter/fog_size = 8.0
+shader_parameter/spread_progress = 1.0
+shader_parameter/no_fog_threshold = -0.15
+shader_parameter/light_affected_threshold = 0.05
+shader_parameter/flicker_strength = 0.3
+shader_parameter/flicker_speed = 1.0
+shader_parameter/noise_tex = ExtResource("2_phwvp")
+shader_parameter/noise_scale = 0.735
+shader_parameter/falloff = 2.6

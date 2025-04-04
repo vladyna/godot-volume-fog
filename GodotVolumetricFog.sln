@@ -1,0 +1,19 @@
+﻿Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GodotVolumetricFog", "GodotVolumetricFog.csproj", "{A018BA16-5793-4DC9-B04A-1650C535DCAB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+	Debug|Any CPU = Debug|Any CPU
+	ExportDebug|Any CPU = ExportDebug|Any CPU
+	ExportRelease|Any CPU = ExportRelease|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A018BA16-5793-4DC9-B04A-1650C535DCAB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A018BA16-5793-4DC9-B04A-1650C535DCAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A018BA16-5793-4DC9-B04A-1650C535DCAB}.ExportDebug|Any CPU.ActiveCfg = ExportDebug|Any CPU
+		{A018BA16-5793-4DC9-B04A-1650C535DCAB}.ExportDebug|Any CPU.Build.0 = ExportDebug|Any CPU
+		{A018BA16-5793-4DC9-B04A-1650C535DCAB}.ExportRelease|Any CPU.ActiveCfg = ExportRelease|Any CPU
+		{A018BA16-5793-4DC9-B04A-1650C535DCAB}.ExportRelease|Any CPU.Build.0 = ExportRelease|Any CPU
+	EndGlobalSection
+EndGlobal

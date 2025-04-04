@@ -1,0 +1,43 @@
+[gd_scene load_steps=5 format=3 uid="uid://bfsh8s2bxhxio"]
+
+[ext_resource type="Material" uid="uid://hixndei47d4k" path="res://materials/fog_material.tres" id="1_u4bhq"]
+[ext_resource type="Script" uid="uid://cq6wlqbslkw4t" path="res://scripts/volumetric_fog_controller.gd" id="2_u4bhq"]
+
+[sub_resource type="Environment" id="Environment_xch8j"]
+volumetric_fog_enabled = true
+volumetric_fog_density = 0.0
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_4henx"]
+
+[node name="DemoFogGdscript" type="Node"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_xch8j")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.282609, 0.959235, 0, -0.959235, 0.282609, 0, 8.5676, 1.28506)
+light_energy = 3.296
+light_indirect_energy = 3.009
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0, 0)
+mesh = SubResource("PlaneMesh_4henx")
+
+[node name="FogVolume" type="FogVolume" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 0)
+size = Vector3(8, 8, 8)
+material = ExtResource("1_u4bhq")
+
+[node name="FogController" type="Node3D" parent="." node_paths=PackedStringArray("_lights", "_fogVolume")]
+script = ExtResource("2_u4bhq")
+fog_material = ExtResource("1_u4bhq")
+_lights = [NodePath("../OmniLight3D")]
+_fogSpread = 1.0
+_fogVolume = NodePath("../FogVolume")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+light_color = Color(1, 0, 1, 1)
+omni_range = 4.0
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.979865, 0.199659, 0, -0.199659, 0.979865, 0, 3.81451, 7.84405)
