@@ -93,4 +93,4 @@ Want dynamic, evolving fog?
 You can change max light in shader itself
 
 # 🙌 Credits
-Developed by Vladyna.
+Developed by [Vladyna](https://vladyna.lol/)
