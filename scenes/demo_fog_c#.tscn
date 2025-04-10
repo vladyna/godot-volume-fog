@@ -30,12 +30,13 @@ material = ExtResource("1_qpsdv")
 
 [node name="FogController" type="Node3D" parent="." node_paths=PackedStringArray("_lights", "_fogVolume")]
 script = ExtResource("2_nj0il")
-FogMaterial = ExtResource("1_qpsdv")
+_fogMaterial = ExtResource("1_qpsdv")
 _lights = [NodePath("../OmniLight3D")]
 _fogSpread = 1.0
 _fogVolume = NodePath("../FogVolume")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.02666)
 light_color = Color(1, 0, 1, 1)
 omni_range = 4.0
 

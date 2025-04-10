@@ -6,9 +6,9 @@ namespace VolumetricFog
     public partial class VolumetricFogController : Node3D
     {
         #region Exposed Dependencies
-        [Export] public ShaderMaterial FogMaterial;
-        [Export] public int MaxLights = 8;
-        [Export] public Array<OmniLight3D> _lights;
+        [Export] private ShaderMaterial _fogMaterial;
+        [Export] private int _maxLights = 8;
+        [Export] private Array<OmniLight3D> _lights;
         [Export] private float _maxFogDensity = 5f;
         [Export] private float _fogSpread = 0f;
         [Export] private FogVolume _fogVolume;
@@ -23,7 +23,7 @@ namespace VolumetricFog
         #region Godot's Methods
         public override void _Ready()
         {
-            if (FogMaterial == null)
+            if (_fogMaterial == null)
                 return;
             Initialize();
         }
@@ -36,7 +36,7 @@ namespace VolumetricFog
         #region Public Methods
         public void AddOmniLight(OmniLight3D light)
         {
-            if (_lights.Count < MaxLights)
+            if (_lights.Count < _maxLights)
             {
                 _lights.Add(light);
             }
@@ -57,22 +57,22 @@ namespace VolumetricFog
         #region Private Methods 
         private void Initialize()
         {
-            _lightArray = new Vector3[MaxLights];
-            _lightRadiuses = new float[MaxLights];
-            _lightColors = new Vector3[MaxLights];
+            _lightArray = new Vector3[_maxLights];
+            _lightRadiuses = new float[_maxLights];
+            _lightColors = new Vector3[_maxLights];
 
-            FogMaterial.SetShaderParameter("spread_progress", 0);
+            _fogMaterial.SetShaderParameter("spread_progress", 0);
 
             UpdateFogShaderLights();
         }
 
         private void UpdateFog()
         {
-            if (FogMaterial == null)
+            if (_fogMaterial == null)
                 return;
 
             UpdateFogShaderLights();
-            FogMaterial.SetShaderParameter("spread_progress", _fogSpread);
+            _fogMaterial.SetShaderParameter("spread_progress", _fogSpread);
         }
 
         private void UpdateFogShaderLights()
@@ -91,11 +91,11 @@ namespace VolumetricFog
 
             }
 
-            FogMaterial.SetShaderParameter("light_positions", _lightArray);
-            FogMaterial.SetShaderParameter("light_count", _lights.Count);
-            FogMaterial.SetShaderParameter("light_radiuses", _lightRadiuses);
-            FogMaterial.SetShaderParameter("light_colors", _lightColors);
-            FogMaterial.SetShaderParameter("fog_size", GetVolumeLongsetSide());
+            _fogMaterial.SetShaderParameter("light_positions", _lightArray);
+            _fogMaterial.SetShaderParameter("light_count", _lights.Count);
+            _fogMaterial.SetShaderParameter("light_radiuses", _lightRadiuses);
+            _fogMaterial.SetShaderParameter("light_colors", _lightColors);
+            _fogMaterial.SetShaderParameter("fog_size", GetVolumeLongsetSide());
         }
 
         private float GetVolumeLongsetSide()

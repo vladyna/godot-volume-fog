@@ -5,15 +5,15 @@
 
 [resource]
 shader = ExtResource("1_3wgdf")
-shader_parameter/light_positions = PackedVector3Array()
-shader_parameter/light_radiuses = PackedFloat32Array()
-shader_parameter/light_colors = PackedVector3Array()
+shader_parameter/light_positions = PackedVector3Array(0, 0, 0)
+shader_parameter/light_radiuses = PackedFloat32Array(0)
+shader_parameter/light_colors = PackedVector3Array(0, 0, 0)
 shader_parameter/light_count = 1
 shader_parameter/fog_density = 6.655
 shader_parameter/fog_size = 8.0
 shader_parameter/spread_progress = 1.0
 shader_parameter/no_fog_threshold = -0.15
-shader_parameter/light_affected_threshold = 0.05
+shader_parameter/light_affected_threshold = 0.1
 shader_parameter/flicker_strength = 0.3
 shader_parameter/flicker_speed = 1.0
 shader_parameter/noise_tex = ExtResource("2_phwvp")
