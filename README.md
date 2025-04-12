@@ -1,5 +1,4 @@
-[![Watch the demo](https://i9.ytimg.com/vi_webp/wBu_E0tLBlc/mqdefault.webp?v=67f58562&sqp=CLy66r8G&rs=AOn4CLAWqC1FSw66wkpU6uqtLLtRb0rjrg)](https://github.com/vladyna/godot-volume-fog/raw/main/video/demo.mp4)
-
+![demo](https://github.com/user-attachments/assets/dde0c07a-5d8a-4330-9a19-9fbb6cdb3a6d)
 
 
 # 🌫️ Volumetric Fog Controller for Godot 4
