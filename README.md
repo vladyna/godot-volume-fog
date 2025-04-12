@@ -1,6 +1,5 @@
-<video src="https://github.com/vladyna/godot-volume-fog/raw/main/video/demo.mp4" controls autoplay loop muted width="600">
-    Your browser does not support the video tag.
-</video>
+[![Watch the demo](https://i9.ytimg.com/vi_webp/wBu_E0tLBlc/mqdefault.webp?v=67f58562&sqp=CLy66r8G&rs=AOn4CLAWqC1FSw66wkpU6uqtLLtRb0rjrg)](https://github.com/vladyna/godot-volume-fog/raw/main/video/demo.mp4)
+
 
 
 # 🌫️ Volumetric Fog Controller for Godot 4
