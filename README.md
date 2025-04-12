@@ -94,3 +94,4 @@ You can change max light in shader itself
 
 # 🙌 Credits
 Developed by [Vladyna](https://vladyna.lol/)
+Check video in [youtube](https://www.youtube.com/watch?v=wBu_E0tLBlc)
